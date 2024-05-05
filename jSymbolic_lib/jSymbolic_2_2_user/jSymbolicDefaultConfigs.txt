@@ -1,0 +1,95 @@
+<jSymbolic_options>
+window_size=0.0
+window_overlap=0.0
+save_features_for_each_window=false
+save_overall_recording_features=true
+convert_to_arff=false
+convert_to_csv=true
+<features_to_extract>
+Range
+Importance of Bass Register
+Importance of Middle Register
+Importance of High Register
+Dominant Spread
+Strong Tonal Centres
+Most Common Pitch
+Prevalence of Most Common Pitch
+Interval Between Most Prevalent Pitches
+Pitch Variability
+Major or Minor
+First Pitch
+Last Pitch
+Most Common Melodic Interval
+Mean Melodic Interval
+Distance Between Most Prevalent Melodic Intervals
+Prevalence of Most Common Melodic Interval
+Relative Prevalence of Most Common Melodic Intervals
+Amount of Arpeggiation
+Melodic Thirds
+Melodic Perfect Fourths
+Melodic Tritones
+Melodic Perfect Fifths
+Melodic Sixths
+Melodic Sevenths
+Melodic Octaves
+Melodic Large Intervals
+Minor Major Melodic Third Ratio
+Melodic Embellishments
+Direction of Melodic Motion
+Melodic Pitch Variety
+Average Number of Simultaneous Pitch Classes
+Variability of Number of Simultaneous Pitch Classes
+Average Number of Simultaneous Pitches
+Variability of Number of Simultaneous Pitches
+Most Common Vertical Interval
+Second Most Common Vertical Interval
+Prevalence of Most Common Vertical Interval
+Prevalence of Second Most Common Vertical Interval
+Vertical Unisons
+Vertical Minor Seconds
+Vertical Thirds
+Vertical Tritones
+Vertical Perfect Fourths
+Vertical Perfect Fifths
+Vertical Sixths
+Vertical Sevenths
+Vertical Octaves
+Perfect Vertical Intervals
+Vertical Dissonance Ratio
+Vertical Minor Third Prevalence
+Vertical Major Third Prevalence
+Diminished and Augmented Triads
+Dominant Seventh Chords
+Seventh Chords
+Minor Major Triad Ratio
+Initial Time Signature
+Metrical Diversity
+Note Density per Quarter Note
+Rhythmic Value Histogram
+Range of Rhythmic Values
+Number of Different Rhythmic Values Present
+Prevalence of Short Rhythmic Values
+Prevalence of Medium Rhythmic Values
+Prevalence of Long Rhythmic Values
+Most Common Rhythmic Value
+Prevalence of Most Common Rhythmic Value
+Complete Rests Fraction
+Partial Rests Fraction
+Initial Tempo
+Tempo Variability
+Duration in Seconds
+Note Density
+Minimum Note Duration
+Maximum Note Duration
+Average Note Duration
+Variability of Note Durations
+Amount of Staccato
+Number of Strong Rhythmic Pulses
+Number of Moderate Rhythmic Pulses
+Harmonicity of Two Strongest Rhythmic Pulses
+Strength Ratio of Two Strongest Rhythmic Pulses
+Rhythmic Variability
+Rhythmic Looseness
+Polyrhythms
+Dynamic Range
+Variation of Dynamics
