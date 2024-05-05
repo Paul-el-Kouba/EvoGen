@@ -56,7 +56,7 @@ for file in os.listdir(midi_dir):
     if file.endswith(".mid"):
         midi_file = os.path.join(midi_dir, file)
         temp_dict = sentimentLearner.predict_sentiments(midi_file)
-        theme, predicted = temp_dict.items()
+        theme, predicted = next(iter(temp_dict.items()))
         file_emotion_dict[theme] = predicted
 
 distances = {file: similarityMeasure.euclidean(target_emotions, predicted_emotions) for file, predicted_emotions in file_emotion_dict.items()}
