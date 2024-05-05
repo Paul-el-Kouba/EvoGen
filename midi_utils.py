@@ -1,3 +1,4 @@
+import os
 import mido
 
 
@@ -87,4 +88,5 @@ def create_new_theme(generated_mid):
     """
         Save the new theme to be evaluated
     """
-    mid.save(generated_mid)
+    mid.save(f"{generated_mid[:17]}/120_{generated_mid[18:]}")
+    os.remove(generated_mid)
