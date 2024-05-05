@@ -99,8 +99,10 @@ class Sentiment_Learner:
         self.extract_features(midi_song)
 
         generated_features = pd.read_csv(f'./midi_files/features/{midi_song[18:-4]}.csv')
-        generated_features = generated_features.fillna(0, inplace=True)
+        #generated_features = generated_features.fillna(0)
         generated_features = generated_features.to_numpy()[0][1:]
+        arr = generated_features
+        generated_features = np.where(arr != ' NaN', arr.astype(float), 0)
 
         model = KNN(21)
         model.fit(labelled_features, list(labelled_sentiments.keys()))
@@ -108,4 +110,4 @@ class Sentiment_Learner:
 
         NN_sentiment = [labelled_sentiments[i] for i in NN_pieces]
 
-        return {midi_song[18:-4]: list(np.average(NN_sentiment, axis=0))}
+        return {f"{midi_song[18:-4]}.mid": list(np.average(NN_sentiment, axis=0))}

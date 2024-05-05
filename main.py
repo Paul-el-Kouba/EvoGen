@@ -64,8 +64,8 @@ sorted_files = sorted(distances.items(), key=lambda x: x[1])
 closest_files = dict(sorted_files[:50])
 for file in file_emotion_dict.keys():
     if file not in closest_files:
-        os.remove(file)
-        del file_emotion_dict[file]
+        del_file = os.path.join(midi_dir, file)
+        os.remove(del_file)
 
 
 """
