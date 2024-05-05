@@ -99,7 +99,7 @@ class Sentiment_Learner:
         self.extract_features(midi_song)
 
         generated_features = pd.read_csv(f'./midi_files/features/{midi_song[18:-4]}.csv')
-        generated_features = generated_features.fillna(0)
+        generated_features = generated_features.fillna(0, inplace=True)
         generated_features = generated_features.to_numpy()[0][1:]
 
         model = KNN(21)
