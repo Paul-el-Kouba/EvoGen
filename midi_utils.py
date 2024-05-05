@@ -33,7 +33,11 @@ def create_new_theme(generated_mid):
         mid.tracks[2].append(msg.copy())
 
     if mid.tracks[1]:
+<<<<<<< HEAD
         last_time_track_1 = max((msg.time for msg in mid.tracks[1] if msg.type == 'note_on'), default=0
+=======
+        last_time_track_1 = max((msg.time for msg in mid.tracks[1] if msg.type == 'note_on'), default=0)
+>>>>>>> 83462ea (MIDI Cropping)
         while mid.tracks[1][-1].time != last_time_track_1:
             mid.tracks[1].pop()
 
