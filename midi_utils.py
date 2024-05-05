@@ -88,5 +88,7 @@ def create_new_theme(generated_mid):
     """
         Save the new theme to be evaluated
     """
-    mid.save(f"{generated_mid[:17]}/120_{generated_mid[18:]}")
+    file_name = f"{generated_mid[:17]}/120_{generated_mid[18:]}"
+    mid.save(file_name)
     os.remove(generated_mid)
+    return file_name

@@ -76,8 +76,7 @@ midi_files = []
 for file in os.listdir(midi_dir):
     if file.endswith(".mid"):
         midi_file = os.path.join(midi_dir, file)
-        midi_files.append(midi_file)
-        create_new_theme(midi_file)
+        midi_files.append(create_new_theme(midi_file))
 
 """
     Expand on the themes
