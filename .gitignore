@@ -5,3 +5,4 @@ Pipfile
 midi_files/midi/*
 midi_files/features/*
 polyphemus/
+ThemeTransformer/
