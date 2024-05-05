@@ -4,3 +4,4 @@ __pycache__
 Pipfile
 midi_files/midi/*
 midi_files/features/*
+polyphemus/
