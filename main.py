@@ -82,12 +82,14 @@ for file in os.listdir(midi_dir):
     Expand on the themes
 """
 # Define the maximum number of threads
-max_threads = 50  # Adjust this based on your system's capabilities
+max_threads = 1  # Adjust this based on your system's capabilities
 
 
 def expand_theme(midi_theme):
     try:
-        command = ["python", "inference.py", "--cuda", "--theme", midi_theme, "--out_midi",
+        # add --cuda somehow and make it work
+        @TODO
+        command = ["python", "inference.py", "--theme", midi_theme, "--out_midi",
                    f"../midi_files/midi/expanded_{midi_theme[18:]}"]
         cwd = "./ThemeTransformer/"
         subprocess.run(command, cwd=cwd)
