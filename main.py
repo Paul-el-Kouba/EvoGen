@@ -63,7 +63,7 @@ for file in os.listdir(midi_dir):
 distances = {file: similarityMeasure.euclidean(target_emotions, predicted_emotions) for file, predicted_emotions in
              file_emotion_dict.items()}
 sorted_files = sorted(distances.items(), key=lambda x: x[1])
-closest_files = dict(sorted_files[:50])
+closest_files = dict(sorted_files[:5])
 for file in file_emotion_dict.keys():
     if file not in closest_files:
         del_file = os.path.join(midi_dir, file)
@@ -88,8 +88,8 @@ max_threads = 1  # Adjust this based on your system's capabilities
 def expand_theme(midi_theme):
     try:
         # add --cuda somehow and make it work
-        command = ["python", "inference.py", "--cuda", "--theme", midi_theme, "--out_midi",
-                   f"../midi_files/midi/expanded_{midi_theme[18:]}"]
+        command = ["python", "inference.py", "--theme", midi_theme, "--out_midi",
+                   f"../midi_files/midi/expanded_{midi_theme[19:]}"]
         cwd = "./ThemeTransformer/"
         subprocess.run(command, cwd=cwd)
         os.remove(midi_theme)
