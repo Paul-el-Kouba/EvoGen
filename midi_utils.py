@@ -20,18 +20,13 @@ def create_new_theme(generated_mid):
                     msg.channel = 0
                 elif track.name == 'Strings':
                     msg.channel = 1
-                elif track.name == 'Bass':
-                    msg.channel = 0
 
     mid.tracks[1] = [msg for msg in mid.tracks[1] if (msg.type != 'note_on' and msg.type != "end_of_track")]
     mid.tracks[2] = [msg for msg in mid.tracks[2] if (msg.type != 'note_on' and msg.type != "end_of_track")]
 
-    mid2.tracks[2] = [msg for msg in mid2.tracks[2] if msg.type == 'note_on' or msg.type == 'end_of_track']
     mid2.tracks[3] = [msg for msg in mid2.tracks[3] if msg.type == 'note_on' or msg.type == 'end_of_track']
     mid2.tracks[4] = [msg for msg in mid2.tracks[4] if msg.type == 'note_on' or msg.type == 'end_of_track']
 
-    for msg in mid2.tracks[2]:
-        mid.tracks[1].append(msg.copy())
     for msg in mid2.tracks[3]:
         mid.tracks[1].append(msg.copy())
     for msg in mid2.tracks[4]:
